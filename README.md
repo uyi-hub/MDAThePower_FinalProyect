@@ -28,7 +28,9 @@ Este proyecto analiza **87.228 reservas** de dos hoteles de Portugal, un hotel u
 
 **Clave de unión:** código de país ISO3 + año de llegada.
 
-**Dataset final:** 87.228 filas × 52 columnas (`data/processed/hotel_bookings_wb.csv`).
+**Dataset final:** 87.228 filas × 52 columnas (`data/processed/hotel_bookings_wb_csv.zip`).
+
+> El CSV final pesa unos 27 MB, así que se sube comprimido. Para trabajar con él, descomprímelo en `data/processed/` o ejecuta `01_limpieza_union.ipynb`, que lo regenera.
 
 ---
 
@@ -40,14 +42,14 @@ Este proyecto analiza **87.228 reservas** de dos hoteles de Portugal, un hotel u
 │   │   ├── hotel_bookings.csv          # Fuente 1: Kaggle
 │   │   └── banco_mundial/              # Fuente 2: 4 indicadores + metadatos de país
 │   └── processed/
-│       ├── hotel_bookings_wb.csv       # Dataset final limpio y unido
+│       ├── hotel_bookings_wb_csv.zip   # Dataset final limpio y unido (CSV comprimido)
 │       └── hotel_bookings_wb.xlsx      # Mismo dataset en Excel
 ├── notebooks/
 │   ├── 01_limpieza_union.ipynb         # Limpieza, transformación y unión
 │   └── 02_eda.ipynb                    # Análisis descriptivo, estadístico y visualización
 ├── results/
 │   └── figures/                        # Gráficos generados por el EDA
-├── dashboard/
+├── Dashboard/
 │   └── dashboard_hoteles.xlsx          # Dashboard interactivo en Excel
 ├── requirements.txt
 └── README.md
@@ -60,8 +62,8 @@ Este proyecto analiza **87.228 reservas** de dos hoteles de Portugal, un hotel u
 El proyecto usa **Python 3.12+** y estas librerías: pandas, numpy, matplotlib, seaborn, scipy, openpyxl y jupyter.
 
 ```bash
-git clone https://github.com/<tu-usuario>/<nombre-del-repo>.git
-cd <nombre-del-repo>
+git clone https://github.com/uyi-hub/MDAThePower_FinalProyect.git
+cd MDAThePower_FinalProyect
 python -m venv .venv
 # Windows: .venv\Scripts\activate  |  Mac/Linux: source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -71,7 +73,7 @@ python -m pip install -r requirements.txt
 
 1. `notebooks/01_limpieza_union.ipynb`: genera `data/processed/`.
 2. `notebooks/02_eda.ipynb`: genera `results/figures/`.
-3. `dashboard/dashboard_hoteles.xlsx`: se abre directamente en Excel.
+3. `Dashboard/dashboard_hoteles.xlsx`: se abre directamente en Excel.
 
 ---
 
@@ -148,7 +150,7 @@ El ADR no sigue una distribución normal (test de D'Agostino-Pearson, p < 0,001)
 
 ## 📈 Dashboard
 
-`dashboard/dashboard_hoteles.xlsx` es un dashboard interactivo en Excel con:
+`Dashboard/dashboard_hoteles.xlsx` es un dashboard interactivo en Excel con:
 
 - **Filtros** por hotel, año, segmento y región del país emisor.
 - **6 KPIs:** reservas, tasa de cancelación, ADR medio, estancia media, antelación media e ingreso realizado.
@@ -162,6 +164,7 @@ Todos los valores se calculan con fórmulas (`COUNTIFS`, `AVERAGEIFS`, `SUMIFS`)
 ## ✒️ Autor
 
 - Eugenio Zustovich
-- [@<tu-usuario>](https://github.com/<tu-usuario>)
+- [@uyi-hub](https://github.com/uyi-hub)
 
 **Fuentes:** Antonio, N., de Almeida, A. y Nunes, L. (2019). *Hotel booking demand datasets*. Data in Brief, 22, 41-49 (vía Kaggle). World Bank, *World Development Indicators*.
+
