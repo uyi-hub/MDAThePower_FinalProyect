@@ -159,30 +159,6 @@ Todos los valores se calculan con fórmulas (`COUNTIFS`, `AVERAGEIFS`, `SUMIFS`)
 
 ---
 
-## 🔄 Próximos pasos
-
-- Construir un **modelo predictivo de cancelación** (regresión logística o *gradient boosting*) excluyendo las variables *a posteriori*.
-- Validar el supuesto `CN` = Canadá con la fuente original del dataset.
-- Incorporar variables externas (festivos, eventos, meteorología) para explicar mejor la demanda.
-- Analizar la evolución del ADR descontando la inflación del país emisor.
-
----
-
-## 📝 Supuestos y limitaciones
-
-- La fuente no especifica la moneda del ADR.
-- El ingreso es una **estimación**: ADR × noches de las reservas no canceladas.
-- El periodo no cubre años naturales completos, así que no se comparan totales anuales.
-- Al eliminar duplicados podrían haberse descartado reservas reales de grupos con características idénticas.
-
----
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Para proponer mejoras, abre una *issue* o un *pull request*.
-
----
-
 ## ✒️ Autor
 
 - Eugenio Zustovich
