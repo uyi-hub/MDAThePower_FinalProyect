@@ -1,4 +1,3 @@
-# MDAThePower_FinalProyect
 # 🏨 Reservas hoteleras y contexto económico: EDA y dashboard
 
 *Proyecto final del Máster en Data Analytics: qué explica la demanda, el precio y las cancelaciones de dos hoteles, y qué papel juega el país de origen del cliente.*
@@ -157,30 +156,6 @@ El ADR no sigue una distribución normal (test de D'Agostino-Pearson, p < 0,001)
 - **Tabla de contexto económico** por nivel de renta del país emisor.
 
 Todos los valores se calculan con fórmulas (`COUNTIFS`, `AVERAGEIFS`, `SUMIFS`) sobre la hoja de datos, así que el panel se actualiza al cambiar los filtros. La hoja *Notas* documenta definiciones y supuestos.
-
----
-
-## 🔄 Próximos pasos
-
-- Construir un **modelo predictivo de cancelación** (regresión logística o *gradient boosting*) excluyendo las variables *a posteriori*.
-- Validar el supuesto `CN` = Canadá con la fuente original del dataset.
-- Incorporar variables externas (festivos, eventos, meteorología) para explicar mejor la demanda.
-- Analizar la evolución del ADR descontando la inflación del país emisor.
-
----
-
-## 📝 Supuestos y limitaciones
-
-- La fuente no especifica la moneda del ADR.
-- El ingreso es una **estimación**: ADR × noches de las reservas no canceladas.
-- El periodo no cubre años naturales completos, así que no se comparan totales anuales.
-- Al eliminar duplicados podrían haberse descartado reservas reales de grupos con características idénticas.
-
----
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Para proponer mejoras, abre una *issue* o un *pull request*.
 
 ---
 
